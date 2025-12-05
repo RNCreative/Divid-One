@@ -12,7 +12,7 @@ export const servicesData: ServiceCategory[] = [
       'Sfeerverlichting (Binnen & Buiten)',
       'WiFi Optimalisatie'
     ],
-    image: 'https://picsum.photos/id/352/600/400',
+    image: 'https://www.canva.com/design/DAG6o2ZjTE0/b1DLMBKnVXoor7yA1yMiZw/view?utm_content=DAG6o2ZjTE0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h5f199e3402',
     brands: [
       {
         name: 'Bluesound',

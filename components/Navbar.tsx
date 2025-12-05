@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Zap } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Button from './Button';
+import Logo1 from '../assets/Logo1.png';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,9 +34,14 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
-          <div className="bg-primary text-white p-2 rounded-sm group-hover:bg-secondary transition-colors">
-            <Zap size={24} fill="currentColor" />
-          </div>
+          {/* Logo Afbeelding */}
+          <img 
+            src={Logo1} 
+            alt="Divid-One Logo" 
+            className="h-10 w-auto object-contain" 
+          />
+          
+          {/* Tekst behouden zoals gevraagd. Als het logo de tekst al bevat, kun je deze span hieronder verwijderen */}
           <span className={`text-2xl font-bold tracking-tight ${scrolled ? 'text-dark' : 'text-dark'} `}>
             DIVID<span className="text-secondary">-ONE</span>
           </span>

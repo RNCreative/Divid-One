@@ -17,7 +17,7 @@ const Home: React.FC = () => {
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
           style={{ 
-            backgroundImage: `url('https://picsum.photos/seed/home/1920/1080')`,
+            backgroundImage: `url('https://www.canva.com/design/DAG6oi7iiDs/OumNztFzBKeIOGgINIlSYw/view?utm_content=DAG6oi7iiDs&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he535281ee9')`,
             filter: 'brightness(0.4)'
           }}
         ></div>
