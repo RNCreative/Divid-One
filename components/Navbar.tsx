@@ -40,11 +40,6 @@ const Navbar: React.FC = () => {
             alt="Divid-One Logo" 
             className="h-10 w-auto object-contain" 
           />
-          
-          {/* Tekst behouden zoals gevraagd. Als het logo de tekst al bevat, kun je deze span hieronder verwijderen */}
-          <span className={`text-2xl font-bold tracking-tight ${scrolled ? 'text-dark' : 'text-dark'} `}>
-            DIVID<span className="text-secondary">-ONE</span>
-          </span>
         </Link>
 
         {/* Desktop Menu */}
