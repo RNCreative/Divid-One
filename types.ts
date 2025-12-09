@@ -4,6 +4,11 @@ export interface Project {
   description: string;
   image: string; // URL path
   category: 'Particulier' | 'Zakelijk';
+  fullDescription?: string;
+  gallery?: string[];
+  location?: string;
+  year?: string;
+  tags?: string[];
 }
 
 export interface BrandInfo {

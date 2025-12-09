@@ -1,7 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { projects } from '../data/projects';
 import Button from '../components/Button';
+import { ArrowRight } from 'lucide-react';
 
 const Portfolio: React.FC = () => {
   return (
@@ -31,9 +33,10 @@ const Portfolio: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 group flex flex-col h-full"
+              className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 group flex flex-col h-full hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="relative h-64 overflow-hidden">
+              {/* Clickable Image Area */}
+              <Link to={`/portfolio/${project.id}`} className="relative h-64 overflow-hidden block cursor-pointer">
                 <img 
                   src={project.image} 
                   alt={project.title} 
@@ -42,18 +45,28 @@ const Portfolio: React.FC = () => {
                 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 text-xs font-bold uppercase tracking-wider text-secondary rounded-full shadow-sm">
                   {project.category}
                 </div>
-              </div>
+                {/* Overlay on hover */}
+                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </Link>
               
               <div className="p-8 flex flex-col flex-grow">
-                <h2 className="text-2xl font-bold text-primary mb-3">{project.title}</h2>
+                <Link to={`/portfolio/${project.id}`} className="hover:text-secondary transition-colors">
+                  <h2 className="text-2xl font-bold text-primary mb-3">{project.title}</h2>
+                </Link>
                 <div className="w-12 h-1 bg-secondary mb-4"></div>
                 <p className="text-gray-600 leading-relaxed mb-6 flex-grow">
                   {project.description}
                 </p>
                 
-                {/* Simulated detail functionality or just visual */}
-                <div className="pt-4 border-t border-gray-100">
-                  <span className="text-sm text-gray-400 italic">Gerealiseerd door Divid-One</span>
+                {/* Action Footer */}
+                <div className="pt-6 border-t border-gray-100 flex justify-between items-center">
+                  <span className="text-sm text-gray-400 italic">Divid-One Project</span>
+                  <Link 
+                    to={`/portfolio/${project.id}`}
+                    className="inline-flex items-center gap-2 text-secondary font-semibold hover:gap-3 transition-all"
+                  >
+                    Bekijk project <ArrowRight size={18} />
+                  </Link>
                 </div>
               </div>
             </motion.div>
